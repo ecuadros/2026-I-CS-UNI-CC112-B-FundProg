@@ -3,7 +3,7 @@ Aguirre Soto Javier Rodrigo
 Cabezas Vasquez Angel Jesus
 Calderón Zárate Kevin Óscar
 Castillo Cruzado Fabio
-Castillo Ramos Diego José
+Castillo Ramos Diego José <diego.castillo.r@uni.pe>,
 Cortez Núñez Christian 
 Cueva Julcamoro Nicolas Joel
 De la Cruz Acuña Polet
