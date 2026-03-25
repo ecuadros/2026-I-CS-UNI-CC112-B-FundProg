@@ -24,7 +24,7 @@ Odar Arevalo Anderson Steven
 Santoyo Zuñiga Sandro Aldair <sandro.santoyo.z@uni.pe>
 Torre Palomino Ricardo Sebastian
 Torres Perez Andy Gabriel
-Valderrama Paredes Marcelo
+Valderrama Paredes Marcelo <marcelo.valderrama.p@uni.pe>,
 Vegas Villalva Anthonella Fernanda
 Velasquez Mamani Elvis Rodrigo 
 Velasquez Warthon Pedro Joaquín <pedro.velasquez.w@uni.edu.pe>
