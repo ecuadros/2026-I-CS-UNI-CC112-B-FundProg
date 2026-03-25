@@ -4,7 +4,7 @@ Cabezas Vasquez Angel Jesus
 Calderón Zárate Kevin Óscar
 Castillo Cruzado Fabio
 Castillo Ramos Diego José
-Cortez Núñez Christian 
+Cortez Núñez Christian <christian.cortez.n@uni.pe>
 Cueva Julcamoro Nicolas Joel
 De la Cruz Acuña Polet
 Espinal Pecho Dire Daniel
