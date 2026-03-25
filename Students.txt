@@ -5,7 +5,7 @@ Calderón Zárate Kevin Óscar
 Castillo Cruzado Fabio
 Castillo Ramos Diego José
 Cortez Núñez Christian 
-Cueva Julcamoro Nicolas Joel
+Cueva Julcamoro Nicolas Joel <nicolas.cueva.j@uni.pe>
 De la Cruz Acuña Polet
 Espinal Pecho Dire Daniel
 Gallardo Nuñez Gian Pierre
