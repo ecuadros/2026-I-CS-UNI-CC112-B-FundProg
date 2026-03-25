@@ -22,7 +22,7 @@ Muguerza Infante Fabritzzio Anderson
 Nicolas Ramos de la Cruz
 Odar Arevalo Anderson Steven
 Santoyo Zuñiga Sandro Aldair 
-Torre Palomino Ricardo Sebastian
+Torre Palomino Ricardo Sebastian <ricardo.torre.p@uni.pe>,
 Torres Perez Andy Gabriel
 Valderrama Paredes Marcelo
 Vegas Villalva Anthonella Fernanda
