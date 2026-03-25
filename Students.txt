@@ -20,7 +20,7 @@ Medina Canduelas Jose Javier
 Medina Rumaldo Santiago Alberto
 Muguerza Infante Fabritzzio Anderson 
 Nicolas Ramos de la Cruz
-Odar Arevalo Anderson Steven
+Odar Arevalo Anderson Steven <anderson.odar.a@uni.pe>,
 Santoyo Zuñiga Sandro Aldair 
 Torre Palomino Ricardo Sebastian
 Torres Perez Andy Gabriel
