@@ -17,7 +17,7 @@ Mamani Vilca Margaret Jhaty
 Marin Quispe Joel Gabriel
 Matias Muñoz, Jose Carlos
 Medina Canduelas Jose Javier
-Medina Rumaldo Santiago Alberto
+Medina Rumaldo Santiago Alberto <jose.medina.c@uni.pe>,
 Muguerza Infante Fabritzzio Anderson 
 Nicolas Ramos de la Cruz
 Odar Arevalo Anderson Steven
