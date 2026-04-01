@@ -1,18 +1,18 @@
 #include "arit.h"
 
 // En el .cpp va la implementacion de mis funciones
-int suma(int a, int b){
+T1 suma(T1 a, T1 b){
     return a + b;
 }
 
-int resta(int a, int b){
+T1 resta(T1 a, T1 b){
     return a - b;
 }
 
-int producto(int a, int b){
+T1 producto(T1 a, T1 b){
     return a * b;
 }
 
-int cociente(int a, int b){
+T1 cociente(T1 a, T1 b){
     return a/b;
 }
