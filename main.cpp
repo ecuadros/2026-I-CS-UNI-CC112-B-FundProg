@@ -6,4 +6,5 @@ int main() {
     std::cout << "Hello FundProg-UNI!" << std::endl;
 
     return 0;
+    
 }
