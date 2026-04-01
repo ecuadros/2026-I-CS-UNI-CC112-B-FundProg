@@ -13,5 +13,8 @@ int main() {
     //std::cout << "La suma de " << a << " y " << b << " es " << c << std::endl;
     c = resta(a, b);
     std::cout << c << std::endl;
+
+    c = producto(a, b);
+    std::cout << c << std::endl;
     return 0;
 }
