@@ -10,6 +10,10 @@ int main() {
     int a;
     int b;
     int c, d, e, f;
+    cout << "Digite el valor de a: ";
+    cin >> a;
+    cout << "Digite el valor de b: ";
+    cin >> b;
     c = suma(a,b);
     d = resta(a,b);
     e = producto(a,b);
