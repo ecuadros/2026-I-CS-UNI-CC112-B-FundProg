@@ -1,5 +1,6 @@
+#include "types.h"
 
 // En el .h solo prototipos
-int suma(int a, int b);
-
-int resta(int a, int b);
+T1 suma(T1 a, T1 b);
+T1 resta(T1 a, T1 b);
+T1 producto(T1 a, T1 b);
