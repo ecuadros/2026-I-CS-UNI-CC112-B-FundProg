@@ -1,6 +1,6 @@
 Ernesto Cuadros-Vargas <ecuadros@spc.org.pe>,
 Aguirre Soto Javier Rodrigo
-Cabezas Vasquez Angel Jesus
+Cabezas Vasquez Angel Jesus <angelcabezasvasquez@gmail.com>
 Calderón Zárate Kevin Óscar
 Castillo Cruzado Fabio
 Castillo Ramos Diego José
