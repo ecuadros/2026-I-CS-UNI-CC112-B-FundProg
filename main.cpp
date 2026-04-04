@@ -6,9 +6,9 @@
 int main() { 
     std::cout << "Hello FundProg-UNI!" << std::endl;
     
-    T1 a = 2.4;
-    T1 b = 7.8;
-    T1 c = suma(a, b);
+    int a = 2.4;
+    int b = 7.8;
+    int c = suma(a, b);
     std::cout << c << std::endl;
     //std::cout << "La suma de " << a << " y " << b << " es " << c << std::endl;
 
