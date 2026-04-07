@@ -21,3 +21,6 @@ clean:
 	rm -f $(OBJS) $(TARGET)
 
 .PHONY: all clean
+
+# Codigo de clean adecuado para windows:
+# del /f /q $(OBJS) $(TARGET).exe
