@@ -14,7 +14,7 @@ using SUTT1 = long long;
 using UUT1 = unsigned int;
 using UUTT1 = unsigned long long;
 
-#define __U__
+//#define __U__
 #if defined __U__
     using UT1  = UUT1; 
     using UTT1 = UUTT1;
