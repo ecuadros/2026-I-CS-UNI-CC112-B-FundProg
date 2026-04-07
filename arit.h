@@ -1,11 +1,13 @@
-#ifndef ARIT_H
-#define ARIT_H
+#ifndef __ARIT_H__
+#define __ARIT_H__
+
 #include "types.h"
 
-T1 suma(T1 a, T1 b);
-T1 resta(T1 a, T1 b);
+// En el .h solo prototipos
+T1 suma    (T1 a, T1 b);
+T1 resta   (T1 a, T1 b);
 T1 producto(T1 a, T1 b);
 
-void DemoAritmetica(); // <-- Agrega esta línea al final
+void DemoAritmetica();
 
-#endif
+#endif // __ARIT_H__ 
