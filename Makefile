@@ -1,22 +1,20 @@
 CXX = g++
-CXXFLAGS = -std=c++2b -Wall -g -pthread # Añadido -pthread
-LDFLAGS = -pthread # Añadido -pthread
+CXXFLAGS = -std=c++2b -Wall -g -pthread
+LDFLAGS = -pthread
 
-TARGET = main
-SRCS = main.cpp arit.cpp \
-       util.cpp
-
+TARGET = main.exe
+SRCS = main.cpp arit.cpp util.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CXX) $(LDFLAGS) $^ -o $@
+	$(CXX) $(OBJS) $(LDFLAGS) -o $(TARGET)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(TARGET)
+	del /f *.o *.exe
 
 .PHONY: all clean

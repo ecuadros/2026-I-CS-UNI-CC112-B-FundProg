@@ -3,6 +3,7 @@
 #include "util.h"
 
 // Antes: g++ -std=c++2b main.cpp arit.cpp -o main
+//g++ -std=c++2b main.cpp arit.cpp util.cpp -o main
 // Ahora                : make
 // Limpia los temporales: make clean
 // Compile todo.        : make -B
