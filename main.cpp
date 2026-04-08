@@ -8,6 +8,9 @@
 // Limpia los temporales: make clean
 // Compile todo.        : make -B
 // Luego: ./main
+//Limpiar: mingw32-make clean (borra todo lo temporal).
+//Compilar: mingw32-make (crea todo de nuevo).
+//Correr: ./main (funciona perfecto en PowerShell).
 
 // El main() debe ser muy pero muy pequeñito
 int main() {

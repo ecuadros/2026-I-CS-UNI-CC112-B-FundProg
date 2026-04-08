@@ -3,7 +3,8 @@ CXXFLAGS = -std=c++2b -Wall -g -pthread
 LDFLAGS = -pthread
 
 TARGET = main.exe
-SRCS = main.cpp arit.cpp util.cpp
+# Add the missing file here (e.g., sorting.cpp)
+SRCS = main.cpp arit.cpp util.cpp sorting.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(TARGET)
