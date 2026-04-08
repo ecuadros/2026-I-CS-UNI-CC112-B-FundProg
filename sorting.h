@@ -56,6 +56,24 @@ void BurbujaRecursivo(T arr[], ContainerRange n, Func func) {
 void DemoBurbuja();
 
 // QuickSort
+
+template<typename T, typename Func>
+ContainerRange particionar(T arr[], ContainerRange first, ContainerRange
+last, Func pComp) {
+    auto pivote = arr[last];  // Pivote es el elemento de referencia
+    auto i = (first - 1);
+
+    for (auto j = first; j <= last - 1; j++) {
+        if (arr[j] == pivote) ++i;
+        if ( pComp(pivote, arr[j]) ){
+            ++i; intercambiar(arr[i], arr[j]);
+        }
+    }
+    intercambiar(arr[i + 1], arr[last]);
+    return (i + 1);
+}
+
+
 template <typename T, typename Func>
 void QuickSort(T arr, ContainerRange first, ContainerRange last, Func pComp) {
     if (first < last) {
@@ -64,23 +82,10 @@ void QuickSort(T arr, ContainerRange first, ContainerRange last, Func pComp) {
         QuickSort(arr, pi + 1, last, pComp);
     }
 }
+void DemoQuickSort();
 
 //MergeSort
-template<typename T, typename S>
-void MergeSort( T arr[],
-                ContainerRange const begin,
-                ContainerRange const end,
-                S pComp) {
-    if (begin >= end)
-        return; // Return recursivamente
 
-    auto mid = begin + (end - begin) / 2;
-    MergeSort(arr, begin, mid, pComp);
-    MergeSort(arr, mid + 1, end, pComp);
-    MergeSort(arr, mid, end, pComp);
-}
-
-// // Función para mezclar dos subarreglos ordenados de arr[].
 template<typename T, typename Func>
 void Merge(T arr[], const ContainerRange left,
                                    const ContainerRange mid,
@@ -132,32 +137,19 @@ void Merge(T arr[], const ContainerRange left,
     delete[] leftArray;
     delete[] rightArray;
 }
-
 template<typename T, typename Func>
-ContainerRange particionar(T arr[], ContainerRange first, ContainerRange
-last, Func pComp) {
-    auto pivote = arr[last];  // Pivote es el elemento de referencia
-    auto i = (first - 1);
+void MergeSort( T arr[],
+                ContainerRange const begin,
+                ContainerRange const end,
+                Func pComp) {
+    if (begin >= end)
+        return; // Return recursivamente
 
-    for (auto j = first; j <= last - 1; j++) {
-        if (arr[j] == pivote) ++i;
-        if ( (*pComp)(arr[j], pivote) ){
-            ++i; intercambiar(arr[i], arr[j]);
-        }
-    }
-    intercambiar(arr[i + 1], arr[last]);
-    return (i + 1);
+    auto mid = begin + (end - begin) / 2;
+    MergeSort(arr, begin, mid, pComp);
+    MergeSort(arr, mid + 1, end, pComp);
+    Merge(arr, begin, mid, end, pComp);
 }
-
-template<typename T, typename S>
-ContainerRange  particionar(T arr[], ContainerRange first, ContainerRange last, S pComp);
-template<typename T, typename Func>
-void QuickSort (T arr[], ContainerRange first, ContainerRange last, Func pComp);
-void DemoQuickSort();
-template<typename T, typename S>
-void MergeSort(T arr[], ContainerRange const left, ContainerRange const mid, const ContainerRange right, S pComp);
-template<typename T, typename S>
-void MergeSort(T arr[], const ContainerRange begin, const ContainerRange end, S pComp);
 void DemoMergeSort();
 
 void DemoSorting();
