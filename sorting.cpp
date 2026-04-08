@@ -65,6 +65,27 @@ void DemoBurbuja() {
   //     cout << str4 << endl;
 }
 
+ContainerRange particionar(T1* arr, ContainerRange first, ContainerRange last, Func func) {
+    auto pivote = arr[last];  
+    auto i = (first - 1);
+
+    for (auto j = first; j <= last - 1; j++) {
+        if (func(arr[j], pivote)) {
+            ++i; intercambiar(arr[i], arr[j]);
+        }
+    }
+    intercambiar(arr[i + 1], arr[last]);
+    return (i + 1);
+}
+
+void QuickSort(T1* arr, ContainerRange first, ContainerRange last, Func func) {
+    if (first < last) {
+        auto pi = particionar(arr, first, last, func);
+        QuickSort(arr, first, pi - 1, func);
+        QuickSort(arr, pi + 1, last, func);
+    }
+}
+
 // ContainerRange particionar(T1* arr, ContainerRange first, ContainerRange
 // last, CompFunc pComp) {
 //     auto pivote = arr[last];  // Pivote es el elemento de referencia
@@ -94,6 +115,17 @@ void DemoQuickSort() {
     T1 arr[] = {5, 2, 8, 15, 1, 9, 4, 7, 3, 6};
     auto n = sizeof(arr) / sizeof(arr[0]);
 
+    PrintArray(arr, n);
+    QuickSort(arr, 0, n - 1, Mayor<T1>);
+    cout << "Arreglo ordenado Ascendente: \n";
+    PrintArray(arr, n);
+
+    QuickSort(arr, 0, n - 1, Menor<T1>);
+    cout << "Arreglo ordenado Descendente: \n";
+    PrintArray(arr, n);
+
+    cout << endl;
+
 //     QuickSort(arr, 0, n - 1, &Mayor);
 //     cout << "Arreglo ordenado Ascendente: \n";
 //     PrintArray(arr, n, cout);
@@ -104,6 +136,7 @@ void DemoQuickSort() {
 
 //     cout << endl;
 }
+
 
 // // Función para mezclar dos subarreglos ordenados de arr[].
 // void Merge(T1* arr, const ContainerRange left,
@@ -177,6 +210,16 @@ void DemoMergeSort(){
     cout << "DemoMergeSort" << endl;
     T1 arr[] = {5, 2, 8, 1, 15, 9, 4, 7, 3, 6};
     auto n = sizeof(arr) / sizeof(arr[0]);
+
+    PrintArray(arr, n);
+    MergeSort(arr, 0, n - 1, Mayor<T1>);
+    cout << "Array ordenado Ascendente:\n";
+    PrintArray(arr, n);
+    MergeSort(arr, 0, n - 1, Menor<T1>);
+    cout << "Array ordenado Descendente:\n";
+    PrintArray(arr, n);
+
+    
 
 //     MergeSort(arr, 0, n-1, &Mayor);
 //     cout << "Array ordenado Ascendente:\n";
