@@ -2,6 +2,7 @@
 #include "arit.h"   // suma, resta
 #include "util.h"
 #include "sorting.h"
+void DemoMergeSort();
 
 // Antes: g++ -std=c++2b main.cpp arit.cpp -o main
 // Ahora                : make
@@ -14,6 +15,6 @@ int main() {
     std::cout << "HelloX FundProg-UNI!" << std::endl;
     // DemoAritmetica();
     //DemoUtil();
-    DemoSorting();
+    DemoMergeSort();
     return 0;
 } 

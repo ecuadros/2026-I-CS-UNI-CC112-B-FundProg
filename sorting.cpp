@@ -1,100 +1,34 @@
 #include <iostream>
+#include "util.h"
+#include "types.h"
 #include "sorting.h"
-// #include "array.h"
 
 using namespace std;
 
+void DemoMergeSort() {
+    T1 arr[] = {5, 2, 8, 1, 15, 9, 4, 7, 3, 6};
+    ContainerRange n = sizeof(arr) / sizeof(arr[0]);
 
-template <typename T>
-void intercambiar(T& a, T& b){
-    T temp = a;
-    a = b;
-    b = temp;
-}
+    cout << "--- PRUEBA MERGE SORT ---" << endl;
+    MergeSort(arr, 0, n - 1, Menor);
+    cout << "Ascendente: "; PrintArray(arr, n, cout);
 
+    // --- PRUEBA QUICK SORT ---
+    T1 arr2[] = {10, 7, 8, 9, 1, 5};
+    ContainerRange n2 = sizeof(arr2) / sizeof(arr2[0]);
 
-void PrintArray(ContainerElemType1 arr[], ContainerRange n){
-    for (auto i = 0; i < n; ++i)
-        cout << arr[i] << " ";
+    cout << "\n--- PRUEBA QUICK SORT ---" << endl;
+    QuickSort(arr2, 0, n2 - 1, Mayor); // Probamos descendente
+    cout << "Descendente: "; PrintArray(arr2, n2, cout);
+    
     cout << endl;
 }
-
-void PrintArray(ContainerElemType2 arr[], ContainerRange n){
-    for (auto i = 0; i < n; ++i)
-        cout << arr[i] << " ";
-    cout << endl;
-}
-
-// Bubble  
-template <typename T>
-void BurbujaClasico(ContainerElemType1 arr[], ContainerRange n) {
-    if (n <= 1)
-        return;
-    for (auto i = 0; i < n - 1; ++i)
-        for (auto j = i+1; j < n; ++j)
-            if( arr[i] > arr[j] )                   // if ( (*pComp)(arr[i], arr[j]) )
-                intercambiar(arr[i], arr[j]);
-}
-
-void BurbujaClasico(ContainerElemType2 arr[], ContainerRange n) {
-    if (n <= 1)
-        return;
-    for (auto i = 0; i < n - 1; ++i)
-        for (auto j = i+1; j < n; ++j)
-            if( arr[i] > arr[j] )                   // if ( (*pComp)(arr[i], arr[j]) )
-                intercambiar(arr[i], arr[j]);
-}
-
-// Bubble
-void BurbujaRecursivo(ContainerElemType1* arr, ContainerRange n) {
-    if (n <= 1)
-        return;
-    for (auto j = 1; j < n; ++j)
-        if ( arr[0] > arr[j] )                   // if ( (*pComp)(arr[j], arr[0]) )
-            intercambiar(arr[0], arr[j]);
-    BurbujaRecursivo(arr+1, n-1);
-}
-
-void BurbujaRecursivo(ContainerElemType2* arr, ContainerRange n) {
-    if (n <= 1)
-        return;
-    for (auto j = 1; j < n; ++j)
-        if ( arr[0] > arr[j] )                   // if ( (*pComp)(arr[j], arr[0]) )
-            intercambiar(arr[0], arr[j]);
-    BurbujaRecursivo(arr+1, n-1);
-}
-
-void DemoBurbuja(){
-    cout << "DemoBurbuja \n";
-
-    cout << "BurbujaClasico \n";
-    ContainerElemType1 arr1[] = {5, 2, 8, 1, 15, 9, 4, 7, 3, 6};
-    auto n1 = sizeof(arr1) / sizeof(arr1[0]);
-
-    PrintArray(arr1, n1);
-    BurbujaClasico(arr1, n1);
-    PrintArray(arr1, n1);
-
-    cout << "BurbujaRecursivo \n";
-    ContainerElemType1 arr2[] = {5, 2, 8, 1, 15, 9, 4, 7, 3, 6};
-    auto n2 = sizeof(arr2) / sizeof(arr2[0]);
-
-    PrintArray(arr2, n2);
-    BurbujaRecursivo(arr2, n2);
-    PrintArray(arr2, n2);
-
-    ContainerElemType2 arr3[] = {5.2, 7.5, 8.1, 1.9, 8.9, 9.1, 4.4, 7.7, 3.3, 6.6};
-    auto n3 = sizeof(arr3) / sizeof(arr3[0]);
-    BurbujaRecursivo(arr3, n3);
-    cout << "Array ordenado Ascendente:\n";
-    PrintArray(arr3, n3);
 
     // BurbujaRecursivo(arr, n, &Menor);
     // cout << "Array ordenado Descendente:\n";
     // PrintArray(arr, 10, cout);
 
     // cout << endl;
-}
 
 // ContainerRange particionar(ContainerElemType1* arr, ContainerRange first, ContainerRange last, CompFunc pComp) {
 //     auto pivote = arr[last];  // Pivote es el elemento de referencia
@@ -111,7 +45,7 @@ void DemoBurbuja(){
 // }
 
 
-// void QuickSort(ContainerElemType1* arr, ContainerRange first, ContainerRange last, CompFunc pComp) {
+//     void QuickSort(ContainerElemType1* arr, ContainerRange first, ContainerRange last, CompFunc pComp) {
 //     if (first < last) {
 //         auto pi = particionar(arr, first, last, pComp);
 //         QuickSort(arr, first, pi - 1, pComp);
@@ -128,7 +62,7 @@ void DemoBurbuja(){
 //     cout << "Arreglo ordenado Ascendente: \n";
 //     PrintArray(arr, n, cout);
 
-//     QuickSort(arr, 0, n - 1, &Menor);
+//     QuickSort(arr, 0, n - 1, &Menor);    
 //     cout << "Arreglo ordenado Descendente: \n";
 //     PrintArray(arr, n, cout);
 
@@ -216,10 +150,9 @@ void DemoBurbuja(){
 //     cout << endl;
 // }
 
-void DemoSorting(){
-    DemoBurbuja();
+// void DemoSorting(){
+   // DemoBurbuja();
     // QuickSort añadido
     // DemoQuickSort();
 
     // DemoMergeSort();
-}
