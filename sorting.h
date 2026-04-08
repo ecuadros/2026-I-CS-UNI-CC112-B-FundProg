@@ -4,7 +4,13 @@
 #include "types.h"
 // #include "compareFunc.h"
 using namespace std;
-using ContainerRange    = int;
+using ContainerRange = int;
+
+template <typename T1, typename ContainerRange, typename CompFunc>
+ContainerRange particionar(T1* arr, ContainerRange first, ContainerRange last, CompFunc pComp);
+
+template <typename T1, typename ContainerRange, typename CompFunc>
+void Merge(T1* arr, const ContainerRange left, const ContainerRange mid, const ContainerRange right, CompFunc pComp);
 
 template <typename Q, typename R> 
 void Test(Q q, R r, string s, Q *pQ, R *pR){
@@ -58,12 +64,25 @@ void DemoBurbuja();
 
 // ContainerRange  particionar(ContainerElemType1* arr, ContainerRange first, ContainerRange last, CompFunc pComp);
 // void QuickSort  (ContainerElemType1* arr, ContainerRange first, ContainerRange last, CompFunc pComp);
-// void DemoQuickSort();
+template <typename T1, typename ContainerRange, typename CompFunc> 
+ void QuickSort(T1* arr, ContainerRange first, ContainerRange last, CompFunc
+ pComp); 
+
+ void DemoQuickSort();
 
 // void Merge(ContainerElemType1* arr, const ContainerRange left, const ContainerRange mid, const ContainerRange right, CompFunc pComp); 
 // void MergeSort(ContainerElemType1* arr, const ContainerRange begin, const ContainerRange end, CompFunc pComp);
-// void DemoMergeSort();
+template <typename T1, typename ContainerRange, typename CompFunc> 
+ void MergeSort( T1* arr,
+                 ContainerRange const begin,
+                 ContainerRange const end,
+                 CompFunc pComp);
+
+void DemoMergeSort();
+
 
 void DemoSorting();
+
+#include "sorting.cpp"
 
 #endif // __SORTING_H__
