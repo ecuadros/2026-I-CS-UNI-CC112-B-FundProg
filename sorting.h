@@ -56,6 +56,64 @@ void BurbujaRecursivo(T arr[], ContainerRange n, Func func) {
 }
 void DemoBurbuja();
 
+
+template <typename T, typename Func> 
+void QuickSort (T arr[], ContainerRange first, ContainerRange last, Func func) {
+    if (first >= last)
+        return;
+    auto pivot = particionar(arr, first, last, func);
+    QuickSort(arr, first, pivot - 1, func);
+    QuickSort(arr, pivot + 1, last, func);
+}
+
+void DemoQuickSort();
+
+template <typename T, typename Func>
+void Merge (T arr[], const ContainerRange left, const ContainerRange mid, const ContainerRange right, Func func) {
+    auto n1 = mid - left + 1;
+    auto n2 = right - mid;
+
+    T* L = new T[n1];
+    T* R = new T[n2];
+
+    for (auto i = 0; i < n1; ++i)
+        L[i] = arr[left + i];
+    for (auto j = 0; j < n2; ++j)
+        R[j] = arr[mid + 1 + j];
+
+    auto i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if ( func(L[i], R[j]) )
+            arr[k] = L[i];
+            i++;
+        else
+            arr[k] = R[j]; j++;
+        k++;
+    } 
+
+    while (i < n1)
+        arr[k] = L[i]; i++:k++;
+    while (j < n2)
+        arr[k] = R[j]; j++:k++;
+
+    delete[] L;
+    delete[] R;
+}
+
+template <typename T, typename Func>
+void MergeSort (T arr[], const ContainerRange begin, const ContainerRange end, Func func) {
+    if (begin >= end)
+        return;
+    auto mid = begin + (end - begin) / 2;
+    MergeSort(arr, begin, mid, func);
+    MergeSort(arr, mid + 1, end, func);
+    Merge(arr, begin, mid, end, func);
+}
+
+void DemoMergeSort();
+
+
+
 // ContainerRange  particionar(ContainerElemType1* arr, ContainerRange first, ContainerRange last, CompFunc pComp);
 // void QuickSort  (ContainerElemType1* arr, ContainerRange first, ContainerRange last, CompFunc pComp);
 // void DemoQuickSort();
