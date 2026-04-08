@@ -4,7 +4,6 @@
 #include <iostream>
 #include "types.h"
 
-// --- LÓGICA DE MERGE SORT ---
 template <typename T, typename Range, typename CompFunc>
 void Merge(T* arr, Range begin, Range mid, Range end, CompFunc pComp) {
     Range n1 = mid - begin + 1;
@@ -33,7 +32,6 @@ void MergeSort(T* arr, Range begin, Range end, CompFunc pComp) {
     Merge(arr, begin, mid, end, pComp);
 }
 
-// --- LÓGICA DE QUICK SORT (Lo que faltaba) ---
 template <typename T, typename Range, typename CompFunc>
 Range Partition(T* arr, Range low, Range high, CompFunc pComp) {
     T pivot = arr[high];

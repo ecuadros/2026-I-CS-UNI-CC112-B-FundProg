@@ -3,7 +3,6 @@
 
 using namespace std;
 
-// ESTO ES LO QUE EL LINKER NO ENCONTRABA:
 void PrintArray(T1* arr, ContainerRange n, ostream& out) {
     for (ContainerRange i = 0; i < n; i++) {
         out << arr[i] << " ";
