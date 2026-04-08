@@ -32,8 +32,7 @@ void PrintArray(T arr[], ContainerRange n){
     cout << endl;
 }
 
-// Videos: https://www.youtube.com/watch?v=ZZuD6iUe3Pc
-// Bubble 
+
 template <typename T, typename Func> 
 void BurbujaClasico(T arr[], ContainerRange n, Func func) {
     if (n <= 1)
@@ -54,16 +53,28 @@ void BurbujaRecursivo(T arr[], ContainerRange n, Func func) {
             intercambiar(arr[0], arr[j]);
     BurbujaRecursivo(arr+1, n-1, func);
 }
+
 void DemoBurbuja();
 
 // ContainerRange  particionar(ContainerElemType1* arr, ContainerRange first, ContainerRange last, CompFunc pComp);
 // void QuickSort  (ContainerElemType1* arr, ContainerRange first, ContainerRange last, CompFunc pComp);
-// void DemoQuickSort();
 
+template <typename T1, typename ContainerRange, typename CompFunc >
+void QuickSort(T1* arr, ContainerRange first, ContainerRange last, CompFunc, pComp);
+
+void DemoQuickSort();
 // void Merge(ContainerElemType1* arr, const ContainerRange left, const ContainerRange mid, const ContainerRange right, CompFunc pComp); 
 // void MergeSort(ContainerElemType1* arr, const ContainerRange begin, const ContainerRange end, CompFunc pComp);
-// void DemoMergeSort();
+
+template <typename T1, typename ContainerRange, typename CompFunc >
+void MergeSort( T1* arr, ContainerRange const begin, ContainerRange const end, CompFunc Pcomp);
+
+
+void DemoMergeSort();
 
 void DemoSorting();
+
+
+#include "sorting.cpp"
 
 #endif // __SORTING_H__
