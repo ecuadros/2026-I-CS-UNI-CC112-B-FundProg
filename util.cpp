@@ -13,7 +13,7 @@ UTT1 fib_rec(UT1 n){
 }
 
 // B: Iteratividad O(n)
-UTT1 fib_iter(UT1 n){
+UTT1 fib_iter(T1 n){
     if (n <= 1)
         return n;
     UTT1 a = 0;
