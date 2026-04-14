@@ -28,4 +28,8 @@ void DemoAritmetica(){
     c = producto(a, b);
     cout << c << endl;
     //cout << "El producto de " << a << " y " << b << " es " << c << endl;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> upstream/09-sorting

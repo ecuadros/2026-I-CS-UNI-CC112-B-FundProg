@@ -4,4 +4,8 @@ main.exe
 *.dSYM
 *.DS_Store
 *.swp
+<<<<<<< HEAD
+*.swo 
+=======
 *.swo
+>>>>>>> upstream/09-sorting

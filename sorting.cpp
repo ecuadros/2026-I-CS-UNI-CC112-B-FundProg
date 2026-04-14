@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+#include <iostream>
+#include "util.h"
+#include "types.h"
+#include "sorting.h"
+
+using namespace std;
+
+void DemoMergeSort() {
+    T1 arr[] = {5, 2, 8, 1, 15, 9, 4, 7, 3, 6};
+    ContainerRange n = sizeof(arr) / sizeof(arr[0]);
+
+    cout << "--- PRUEBA MERGE SORT ---" << endl;
+    MergeSort(arr, 0, n - 1, Menor);
+    cout << "Ascendente: "; PrintArray(arr, n, cout);
+
+    // --- PRUEBA QUICK SORT ---
+    T1 arr2[] = {10, 7, 8, 9, 1, 5};
+    ContainerRange n2 = sizeof(arr2) / sizeof(arr2[0]);
+
+    cout << "\n--- PRUEBA QUICK SORT ---" << endl;
+    QuickSort(arr2, 0, n2 - 1, Mayor); // Probamos descendente
+    cout << "Descendente: "; PrintArray(arr2, n2, cout);
+    
+    cout << endl;
+}
+
+    // BurbujaRecursivo(arr, n, &Menor);
+    // cout << "Array ordenado Descendente:\n";
+    // PrintArray(arr, 10, cout);
+
+    // cout << endl;
+
+// ContainerRange particionar(ContainerElemType1* arr, ContainerRange first, ContainerRange last, CompFunc pComp) {
+=======
 #include "sorting.h"
 #include "util.h"
 #include <iostream>
@@ -67,6 +102,7 @@ void DemoBurbuja() {
 
 // ContainerRange particionar(T1* arr, ContainerRange first, ContainerRange
 // last, CompFunc pComp) {
+>>>>>>> upstream/09-sorting
 //     auto pivote = arr[last];  // Pivote es el elemento de referencia
 //     auto i = (first - 1);
 
@@ -80,8 +116,13 @@ void DemoBurbuja() {
 //     return (i + 1);
 // }
 
+<<<<<<< HEAD
+
+//     void QuickSort(ContainerElemType1* arr, ContainerRange first, ContainerRange last, CompFunc pComp) {
+=======
 // void QuickSort(T1* arr, ContainerRange first, ContainerRange last, CompFunc
 // pComp) {
+>>>>>>> upstream/09-sorting
 //     if (first < last) {
 //         auto pi = particionar(arr, first, last, pComp);
 //         QuickSort(arr, first, pi - 1, pComp);
@@ -89,33 +130,58 @@ void DemoBurbuja() {
 //     }
 // }
 
+<<<<<<< HEAD
+// void DemoQuickSort() {
+//     cout << "DemoQuickSort \n";
+//     ContainerElemType1 arr[] = {5, 2, 8, 15, 1, 9, 4, 7, 3, 6};
+//     auto n = sizeof(arr) / sizeof(arr[0]);
+=======
 void DemoQuickSort() {
     cout << "DemoQuickSort \n";
     T1 arr[] = {5, 2, 8, 15, 1, 9, 4, 7, 3, 6};
     auto n = sizeof(arr) / sizeof(arr[0]);
+>>>>>>> upstream/09-sorting
 
 //     QuickSort(arr, 0, n - 1, &Mayor);
 //     cout << "Arreglo ordenado Ascendente: \n";
 //     PrintArray(arr, n, cout);
 
+<<<<<<< HEAD
+//     QuickSort(arr, 0, n - 1, &Menor);    
+=======
 //     QuickSort(arr, 0, n - 1, &Menor);
+>>>>>>> upstream/09-sorting
 //     cout << "Arreglo ordenado Descendente: \n";
 //     PrintArray(arr, n, cout);
 
 //     cout << endl;
+<<<<<<< HEAD
+// }
+
+// // Función para mezclar dos subarreglos ordenados de arr[].
+// void Merge(ContainerElemType1* arr, const ContainerRange left, 
+//                                    const ContainerRange mid, 
+//                                    const ContainerRange right, 
+=======
 }
 
 // // Función para mezclar dos subarreglos ordenados de arr[].
 // void Merge(T1* arr, const ContainerRange left,
 //                                    const ContainerRange mid,
 //                                    const ContainerRange right,
+>>>>>>> upstream/09-sorting
 //                                    CompFunc pComp) {
 //     auto const subArrayOne = mid - left + 1;
 //     auto const subArrayTwo = right - mid;
 
 //     // Crear arrays temporales
+<<<<<<< HEAD
+//     auto *leftArray = new ContainerElemType1[subArrayOne],
+//          *rightArray = new ContainerElemType1[subArrayTwo];
+=======
 //     auto *leftArray = new T1[subArrayOne],
 //          *rightArray = new T1[subArrayTwo];
+>>>>>>> upstream/09-sorting
 
 //     // Copiar datos a los arrays temporales leftArray[] y rightArray[]
 //     for (auto i = 0; i < subArrayOne; i++)
@@ -125,6 +191,13 @@ void DemoQuickSort() {
 
 //     auto indexOfSubArrayOne = 0, // Índice inicial del primer sub-array
 //         indexOfSubArrayTwo = 0; // Índice inicial del segundo sub-array
+<<<<<<< HEAD
+//     ContainerRange indexOfMergedArray = left; // Índice inicial del array mezclado
+
+//     // Mezclar los arrays temporales de vuelta a arr[left..right]
+//     while (indexOfSubArrayOne < subArrayOne && indexOfSubArrayTwo < subArrayTwo) {
+//         if ( (*pComp)(rightArray[indexOfSubArrayTwo], leftArray[indexOfSubArrayOne])  ) {
+=======
 //     ContainerRange indexOfMergedArray = left; // Índice inicial del array
 //     mezclado
 
@@ -133,6 +206,7 @@ void DemoQuickSort() {
 //     subArrayTwo) {
 //         if ( (*pComp)(rightArray[indexOfSubArrayTwo],
 //         leftArray[indexOfSubArrayOne])  ) {
+>>>>>>> upstream/09-sorting
 //             arr[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
 //             indexOfSubArrayOne++;
 //         } else {
@@ -160,8 +234,13 @@ void DemoQuickSort() {
 
 // // left es para el índice izquierdo y right es para el índice derecho del
 // // sub-array de arr a ordenar
+<<<<<<< HEAD
+// void MergeSort( ContainerElemType1* arr, 
+//                 ContainerRange const begin, 
+=======
 // void MergeSort( T1* arr,
 //                 ContainerRange const begin,
+>>>>>>> upstream/09-sorting
 //                 ContainerRange const end,
 //                 CompFunc pComp) {
 //     if (begin >= end)
@@ -173,10 +252,17 @@ void DemoQuickSort() {
 //     Merge(arr, begin, mid, end, pComp);
 // }
 
+<<<<<<< HEAD
+// void DemoMergeSort(){
+//     cout << "DemoMergeSort" << endl;
+//     ContainerElemType1 arr[] = {5, 2, 8, 1, 15, 9, 4, 7, 3, 6};
+//     auto n = sizeof(arr) / sizeof(arr[0]);
+=======
 void DemoMergeSort(){
     cout << "DemoMergeSort" << endl;
     T1 arr[] = {5, 2, 8, 1, 15, 9, 4, 7, 3, 6};
     auto n = sizeof(arr) / sizeof(arr[0]);
+>>>>>>> upstream/09-sorting
 
 //     MergeSort(arr, 0, n-1, &Mayor);
 //     cout << "Array ordenado Ascendente:\n";
@@ -186,6 +272,17 @@ void DemoMergeSort(){
 //     cout << "Array ordenado Descendente:\n";
 //     PrintArray(arr, n, cout);
 
+<<<<<<< HEAD
+//     cout << endl;
+// }
+
+// void DemoSorting(){
+   // DemoBurbuja();
+    // QuickSort añadido
+    // DemoQuickSort();
+
+    // DemoMergeSort();
+=======
     cout << endl;
 }
 
@@ -194,3 +291,4 @@ void DemoSorting() {
     DemoQuickSort();
     DemoMergeSort();
 }
+>>>>>>> upstream/09-sorting
