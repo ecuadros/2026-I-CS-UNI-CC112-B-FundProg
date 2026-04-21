@@ -43,7 +43,6 @@ void DemoMatrix1(){
     CreateMatrix(pMat, rows, cols);
     ReadMatrix(pMat, rows, cols);
     
-    // ORDENAR FILA POR FILA
     cout << "\nMatriz ordenada por filas (Mayor):\n";
     for (auto i = 0; i < rows; ++i) {
         BurbujaClasico(pMat[i], cols, Mayor<TP>); 
