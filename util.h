@@ -2,9 +2,9 @@
 #define __UTIL_H__
 #include "types.h"
 
-TT1 fib_rec  (T1 n);
-TT1 fib_iter (T1 n);
-TT1 fact_rec (T1 n);
+TT1 fib_rec(T1 n);
+TT1 fib_iter(T1 n);
+TT1 fact_rec(T1 n);
 TT1 fact_iter(T1 n);
 
 template <typename T>
