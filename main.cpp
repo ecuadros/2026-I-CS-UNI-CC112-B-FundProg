@@ -5,6 +5,7 @@
 #include "punteros.h"
 #include "vector.h"
 #include "matrix.h"
+#include "cmatrix.h"
 #include "cvector.h"
 
 // Antes: g++ -std=c++2b main.cpp arit.cpp -o main
@@ -24,6 +25,7 @@ int main() {
     // DemoPunteros2Vector();
     // DemoMatrix1(); 
 
-    DemoCVector();
+    // DemoCVector();
+    DemoCMatrix1();
     return 0;
 }

@@ -1,6 +1,7 @@
-#include "matrix.h"
 #include <iostream>
 #include <fstream> // ofstream
+#include "matrix.h"
+#include "cmatrix.h"
 
 using namespace std;
 
@@ -54,4 +55,31 @@ void DemoMatrix1(){
     // PrintMatrix(pMat3, rows, cols, ofs3);
     // ofs3.close();
     // DeleteMatrix(pMat3, rows);    
+}
+
+void Sumar1(TP &element){
+    element += 1;
+}
+
+void DemoCMatrix1(){
+    size_t rows, cols;
+    cout << "Demostracion de matrizes" << endl;
+    cout << "Ingrese nro de filas: ";
+    cin >> rows;
+    cout << "Ingrese nro de columnas: ";
+    cin >> cols;
+    
+    CMatrix<TP> m1(rows, cols);
+    m1.ReadMatrix(cin);
+    m1.PrintMatrix(cout);
+    m1.TransformarMatriz(&Sumar1);
+
+    m1.PrintMatrix(cout);
+    // Ahora con funciones lambda
+    m1.TransformarMatriz([](TP &x){ x *= 2; });
+    m1.PrintMatrix(cout);
+
+    ofstream ofs("matriz1.txt");
+    m1.PrintMatrix(ofs);
+    ofs.close();
 }
