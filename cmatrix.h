@@ -60,6 +60,7 @@ void CMatrix<TP>::ReadMatrix(istream &is){
             is >> m_pMat[i][j];
 }
 
+// Aqui luego vamos a generalizar mas este metoddo
 template<typename TP> 
 void CMatrix<TP>::TransformarMatriz(void (*pFunc)(TP&)){
     for (size_t i = 0; i < m_rows; i++)
